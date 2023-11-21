@@ -1,8 +1,10 @@
+import Layout from '../../Components/Layout'
+
 function NotFound() {
     return (
-        <div className='text-3xl font-bold underline'>
+        <Layout>
           Not Found
-        </div>
+        </Layout>
     )
   }
   

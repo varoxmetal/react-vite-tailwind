@@ -1,8 +1,10 @@
+import Layout from '../../Components/Layout'
+
 function MyAccount() {
     return (
-        <div className='text-3xl font-bold underline'>
+        <Layout>
           My Account
-        </div>
+        </Layout>
     )
   }
   
