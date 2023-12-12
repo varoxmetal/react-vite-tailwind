@@ -32,7 +32,7 @@ const Navbar = () => {
             return (
                 <>
                     <li className='text-black/60'>
-                        alvaro@gmail.com
+                        {parsedAccount?.email}
                     </li>
                     <li>
                         <NavLink to='/my-orders' className = {({ isActive }) => isActive ? activeStyle : undefined }>
@@ -66,7 +66,7 @@ const Navbar = () => {
     }
 
     return(
-        <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light'>
+        <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light bg-white'>
             <ul className='flex items-center gap-3'>
                 <li className='font-semibold text-lg'>
                     <NavLink onClick={() => context.setSearchByCategory()} to={`${isUserSignOut ? '/sign-in' : '/'}`}>
@@ -89,7 +89,7 @@ const Navbar = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink onClick={() => context.setSearchByCategory('furnitures')} to='/furnitures' className = {({ isActive }) => isActive ? activeStyle : undefined }>
+                    <NavLink onClick={() => context.setSearchByCategory('furnitures')} to='/furniture' className = {({ isActive }) => isActive ? activeStyle : undefined }>
                         Furnitures
                     </NavLink>
                 </li>
